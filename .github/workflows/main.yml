@@ -22,7 +22,7 @@ jobs:
           CI: true
 
       - name: /personas get lambda deploy zip
-        uses: postman-open-technologies/persona@main
+        uses: postman-open-technologies/personas@main
         with:
             args: zip -qq -r m-s-persona-g.zip personas/get/index.js node_modules
       - name: videos get lambda deploy
@@ -34,7 +34,7 @@ jobs:
             function_name: m-s-persona-g
             zip_file: m-s-persona-g.zip
       - name: /personas post lambda deploy zip
-        uses: postman-open-technologies/persona@main
+        uses: postman-open-technologies/personas@main
         with:
             args: zip -qq -r m-s-persona-po.zip personas/post/index.js node_modules
       - name: videos get lambda deploy
@@ -46,7 +46,7 @@ jobs:
             function_name: m-s-persona-po
             zip_file: m-s-persona-po.zip
       - name: /personas/{persona_id} get lambda deploy zip
-        uses: postman-open-technologies/persona@main
+        uses: postman-open-technologies/personas@main
         with:
             args: zip -qq -r m-s-personas-persona-g.zip personas/persona_id/get/index.js node_modules
       - name: videos get lambda deploy
@@ -58,7 +58,7 @@ jobs:
             function_name: m-s-personas-persona-g
             zip_file: m-s-personas-persona-g.zip
       - name: /personas/{persona_id} put lambda deploy zip
-        uses: postman-open-technologies/persona@main
+        uses: postman-open-technologies/personas@main
         with:
             args: zip -qq -r m-s-personas-persona-pu.zip personas/persona_id/put/index.js node_modules
       - name: videos get lambda deploy
@@ -70,7 +70,7 @@ jobs:
             function_name: m-s-personas-persona-pu
             zip_file: m-s-personas-persona-pu.zip
       - name: /personas/{persona_id} delete lambda deploy zip
-        uses: postman-open-technologies/persona@main
+        uses: postman-open-technologies/personas@main
         with:
             args: zip -qq -r m-s-personas-persona-d.zip personas/persona_id/delete/index.js node_modules
       - name: videos get lambda deploy
