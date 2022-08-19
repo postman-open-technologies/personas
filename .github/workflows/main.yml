@@ -48,15 +48,15 @@ jobs:
       - name: /personas/{persona_id} get lambda deploy zip
         uses: postman-open-technologies/personas@main
         with:
-            args: zip -qq -r m-s-personas-personas-g.zip personas/persona_id/get/index.js node_modules
+            args: zip -qq -r m-s-personas-persona-g.zip personas/persona_id/get/index.js node_modules
       - name: videos get lambda deploy
         uses: appleboy/lambda-action@master
         with:
             aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
             aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
             aws_region: us-west-1
-            function_name: m-s-personas-personas-g
-            zip_file: m-s-personas-personas-g.zip
+            function_name: m-s-personas-persona-g
+            zip_file: m-s-personas-persona-g.zip
       - name: /personas/{persona_id} put lambda deploy zip
         uses: postman-open-technologies/personas@main
         with:
